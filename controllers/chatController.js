@@ -24,17 +24,16 @@ const createChat = async (req, res) => {
             }
         });
 
-        const json = response.data;
+        const json = await response.json();
 
-        console.log('API response:', json);
+        console.log('response:', json)
+        res.status(200).json(json)
 
-        res.status(200).json(json);
+        // console.log('response:', json.choices[0].message.content)
+        //res.status(200).json(json.choices[0].message.content)
 
     } catch (error) {
-
-        console.error(error);
-        res.status(500).send('Internal Server Error');
-
+        res.status(400).json({ error: error.message })
     }
 
 };
