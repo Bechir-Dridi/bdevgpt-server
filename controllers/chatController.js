@@ -32,6 +32,7 @@ const createChat = async (req, res) => {
     }
 }
 
-module.exports = {
-    createChat
-}
+//module.exports = {
+//   createChat
+//}
+export default createChat;
