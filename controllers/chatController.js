@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const createChat = async (req, res) => {
     try {
