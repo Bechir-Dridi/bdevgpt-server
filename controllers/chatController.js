@@ -1,12 +1,12 @@
-import fetch from 'node-fetch';
-
+import axios from 'axios';
 
 const createChat = async (req, res) => {
     try {
         const { msg } = req.body
         console.log("user req received:", msg)
 
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        const response = await axios.post('https://api.openai.com/v1/chat/completions', {
+            //const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json',
