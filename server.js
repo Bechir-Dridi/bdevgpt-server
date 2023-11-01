@@ -24,6 +24,7 @@ app.use("/api/chats", chatRoutes)
 
 
 //listening to server:
-app.listen(PORT, () => { console.log(`Listening on PORT ${PORT}`) })
+//app.listen(PORT, () => { console.log(`Listening on PORT ${PORT}`) })
+app.listen(PORT, () => { console.log(`Listening on server`) })
 
 

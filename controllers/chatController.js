@@ -6,7 +6,7 @@ const createChat = async (req, res) => {
 
         const { msg } = req.body;
 
-        console.log("User request received:", msg);
+        //console.log("User request received:", msg);
 
         const response = await axios({
             method: 'post',
@@ -17,7 +17,7 @@ const createChat = async (req, res) => {
             },
             data: {
                 model: "gpt-3.5-turbo",
-                max_tokens: 100,
+                max_tokens: 50,
                 messages: [
                     { role: "user", content: msg }
                 ]
@@ -26,7 +26,7 @@ const createChat = async (req, res) => {
 
         const json = response.data;
 
-        console.log('response:', json)
+        //console.log('response:', json)
         res.status(200).json(json)
 
         // console.log('response:', json.choices[0].message.content)
