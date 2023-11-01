@@ -24,7 +24,7 @@ const createChat = async (req, res) => {
             }
         });
 
-        const json = await response.json();
+        const json = response.data;
 
         console.log('response:', json)
         res.status(200).json(json)
