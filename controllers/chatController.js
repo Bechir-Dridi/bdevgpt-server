@@ -22,7 +22,7 @@ const createChat = async (req, res) => {
         console.log('response:', json)
         res.status(200).json(json)
 
-        //console.log('response:', json.choices[0].message.content)
+        console.log('response:', json.choices[0].message.content)
         //res.status(200).json(json.choices[0].message.content)
 
     } catch (error) {
