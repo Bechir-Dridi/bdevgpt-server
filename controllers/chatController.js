@@ -1,9 +1,8 @@
 const createChat = async (req, res) => {
     try {
         const { msg } = req.body
-        //console.log("user req received:", msg)
+        console.log("user req received:", msg)
 
-        console.log("createChat msg:", msg)
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
