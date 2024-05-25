@@ -13,7 +13,7 @@ const cors = require("cors")
 
 // Middleware to enable CORS
 app.use(cors(
-    { origin: ["http://localhost:5173", "https://bdevgpt.netlify.app"], credentials: true, } //server accepts requests from static site
+    { origin: "https://bdevgpt.vercel.app", credentials: true, } //server accepts requests from static site
 ))
 
 //parse req to json obj.
